@@ -30,17 +30,11 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(Model model) {
-        Person person = personRepository.findAll().stream().findFirst().orElse(null);
-        SocialMedia socialMedia = socialMediaRepository.findAll().stream().findFirst().orElse(null);
-        List<Interests> interests = interestsRepository.findAll();
-        List<Skill> skills = skillRepository.findAll();
-        List<Work> works = workRepository.findAll();
-
-        model.addAttribute("person", person);
-        model.addAttribute("socialMedia", socialMedia);
-        model.addAttribute("interests", interests);
-        model.addAttribute("skills", skills);
-        model.addAttribute("works", works);
+        model.addAttribute("person", personRepository.findAll().stream().findFirst().orElse(null));
+        model.addAttribute("socialMedia", socialMediaRepository.findAll().stream().findFirst().orElse(null));
+        model.addAttribute("interests", interestsRepository.findAll());
+        model.addAttribute("skills", skillRepository.findAll());
+        model.addAttribute("works", workRepository.findAll());
         return "resume";
     }
 }
