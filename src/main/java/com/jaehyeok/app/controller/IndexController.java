@@ -10,10 +10,6 @@ import java.util.List;
 
 @Controller
 public class IndexController {
-/*    @GetMapping("/")
-        public String index() {
-        return "index";
-    } 과제 1*/
     private final PersonRepository personRepository;
     private final SocialMediaRepository socialMediaRepository;
     private final InterestsRepository interestsRepository;
@@ -27,7 +23,10 @@ public class IndexController {
         this.skillRepository = skillRepository;
         this.workRepository = workRepository;
     }
-
+/*    @GetMapping("/")
+        public String index() {
+        return "index";
+    } 과제 1*/
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("person", personRepository.findAll().stream().findFirst().orElse(null));

@@ -30,7 +30,7 @@ public class AppApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		personRepository.save(new Person("정재혁", "백엔드", "hello@test.com", "010-1234-5678"));
-		socialMediaRepository.save(new SocialMedia("anonymous","", "", ""));
+//		socialMediaRepository.save(new SocialMedia("anonymous","", "", ""));
 //		interestsRepository.save(new Interests("독서"));
 //		skillRepository.save(new Skill("JAVA" , 1));
 //		workRepository.save(new Work("tester","anonymous","test","test"));
