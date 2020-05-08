@@ -27,6 +27,7 @@ public class IndexController {
         public String index() {
         return "index";
     } 과제 1*/
+
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("person", personRepository.findAll().stream().findFirst().orElse(null));

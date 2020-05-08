@@ -1,6 +1,8 @@
 package com.jaehyeok.app.entity;
 
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,8 +11,21 @@ import javax.persistence.Id;
 public class Skill {
     @Id
     @GeneratedValue
+
+    private Long id;
     private String name;
     private Integer grade;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Skill() {
+    }
 
     public Skill(String name, Integer grade) {
         this.name = name;

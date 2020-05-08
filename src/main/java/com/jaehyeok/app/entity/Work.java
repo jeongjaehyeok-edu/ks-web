@@ -1,5 +1,7 @@
 package com.jaehyeok.app.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,6 +10,16 @@ import javax.persistence.Id;
 public class Work {
     @Id
     @GeneratedValue
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     private String position;
     private String company;
     private String time;
@@ -18,6 +30,9 @@ public class Work {
         this.company = company;
         this.time = time;
         this.desc = desc;
+    }
+
+    public Work() {
     }
 
     public String getPosition() {

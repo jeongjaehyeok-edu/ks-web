@@ -1,5 +1,7 @@
 package com.jaehyeok.app.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,6 +10,16 @@ import javax.persistence.Id;
 public class SocialMedia {
     @Id
     @GeneratedValue
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
+    private Long id;
     private String github;
     private String twitter;
     private String instagram;
